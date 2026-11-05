@@ -1,0 +1,75 @@
+.logo {
+  --logo-line: #f7c988;
+  --logo-text: #0d5c3d;
+  --logo-hand: #8eec9c;
+  --logo-eye: #196538;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  width: 4.875em;
+  padding: 0.5em 0.25em 0.375em;
+  background: #fff;
+  border-radius: 2.5em;
+  text-decoration: none;
+  user-select: none;
+}
+.logo__symbol { position: relative; width: 4.0625em; height: 3em; }
+.logo__head {
+  position: absolute; top: 0.3125em; left: 1em; z-index: 4;
+  width: 1em; height: 0.9375em;
+  border: 0.125em solid var(--logo-line); border-radius: 50%; background: #fff;
+}
+.logo__crest {
+  position: absolute; top: -1.5em; left: 1.8625em; z-index: 3;
+  width: 0.4875em; height: 1.925em; transform: rotate(20deg);
+  border-bottom: 0.125em solid var(--logo-line);
+  border-radius: 0 1em 1.5em 3.5em;
+}
+.logo__body {
+  position: absolute; top: 1em; left: 1.25em; z-index: 2;
+  width: 1.125em; height: 1.1875em;
+  border: 0.125em solid var(--logo-line); border-radius: 50%; background: #fff;
+}
+.logo__wing, .logo__tail {
+  position: absolute;
+  border: 0.1em solid var(--logo-line);
+  border-radius: 50% 50% 50% 10%;
+}
+.logo__wing { z-index: 1; background: transparent; }
+.logo__wing_top { top: 0.7em; left: 2.0625em; width: 1.0625em; height: 0.375em; transform: rotate(-35deg); }
+.logo__wing_mid { top: 0.9375em; left: 2.125em; width: 1em; height: 0.375em; transform: rotate(-10deg); }
+.logo__wing_bot { top: 1.375em; left: 1.9375em; width: 0.8125em; height: 0.3125em; transform: rotate(15deg); }
+.logo__tail { z-index: 2; background: #fff; border-width: 0.11em; }
+.logo__tail_f1 { top: 1.625em; left: 2.25em; width: 1.0625em; height: 0.375em; transform: rotate(20deg); }
+.logo__tail_f2 { top: 1.9375em; left: 2.15em; width: 0.9375em; height: 0.375em; transform: rotate(38deg); }
+.logo__tail_f3 { top: 2.1875em; left: 2em; width: 0.8125em; height: 0.3125em; transform: rotate(55deg); }
+.logo__caption { display: flex; flex-direction: column; align-items: center; line-height: 1.05; margin-top: 0.125em; }
+
+
+.logo__head::before {
+  content: ""; position: absolute; top: 0.25em; left: 0.25em;
+  width: 0.25em; height: 0.25em; border-radius: 50%;
+  background: radial-gradient(circle at 0.075em 0.075em, #fff 0 0.045em, var(--logo-eye) 0.05em);
+}
+
+.logo__head::after {
+  content: ""; position: absolute; top: 0.1875em; left: -0.35em;
+  width: 0; height: 0;
+  border-top: 0.1875em solid transparent;
+  border-bottom: 0.1875em solid transparent;
+  border-right: 0.375em solid var(--logo-line);
+}
+
+.logo__symbol::before, .logo__symbol::after {
+  content: ""; position: absolute; z-index: 3;
+  width: 2.75em; height: 1.925em;
+  border-bottom: 0.5em solid var(--logo-hand);
+  border-radius: 0 1em 1.5em 3.5em;
+}
+.logo__symbol::before { top: 0.875em; left: -0.1em; transform: rotate(40deg); }
+.logo__symbol::after { top: 1.5em; left: 0.8625em; transform: rotate(-20deg); }
+.logo__caption::before { content: "Lucky"; font: bold 0.8125em "Comic Sans MS"; color: var(--logo-text); }
+.logo__caption::after { content: "BIRD"; font: 900 0.75em Georgia; letter-spacing: 0.09em; color: var(--logo-text); }

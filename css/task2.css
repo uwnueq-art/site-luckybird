@@ -1,0 +1,157 @@
+.box {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 2px solid #000000;
+  background: linear-gradient(to bottom, #ffffff 0%, #a2d294 65%, #387b2b 100%);
+  cursor: pointer;
+}
+
+.title,
+.title-2 {
+  position: absolute;
+  z-index: 30;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #1a2a4f;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.title {
+  top: 8px;
+  left: 0;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+}
+
+.title-2 {
+  top: 75px;
+  left: 40px;
+  font-size: 15px;
+  transform: rotate(-32deg);
+}
+
+.moving-objects {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.moving-objects img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.actor-boy {
+  left: 18px;
+  bottom: 8px;
+  width: 85px;
+  height: 135px;
+}
+
+.actor-boy img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: opacity 0.15s ease;
+}
+
+.actor-boy .boy-stand {
+  opacity: 1;
+}
+
+.actor-boy .boy-turn,
+.actor-boy .boy-fall {
+  opacity: 0;
+}
+
+.actor-ball {
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  offset-path: path("M 200,200 Q 10,185 30,40 Q 30,40 100,30 Q 100,30 170,40 Q 170,40 180,100 Q 180,100 160,160");
+  offset-anchor: center;
+  offset-rotate: auto;
+}
+
+.actor-brick {
+  width: 150px;
+  height: 150px;
+  opacity: 0;
+  offset-path: path("M 200,100 Q 180,100 150,160");
+  offset-anchor: center;
+  offset-rotate: auto;
+}
+
+.actor-ball img,
+.actor-brick img {
+  display: block;
+}
+
+.box:hover .title-hover,
+.box:hover .actor-boy .boy-turn {
+  opacity: 1;
+}
+
+.box:hover .actor-boy .boy-stand,
+.box:hover .actor-boy .boy-fall {
+  opacity: 0;
+}
+
+.box:hover .actor-ball, .box:hover .actor-brick {
+  animation: spiral-motion 2s forwards;
+}
+
+.box:active .title,
+.box:active .actor-ball,
+.box:active .actor-boy .boy-stand,
+.box:active .actor-boy .boy-turn {
+  opacity: 0;
+  animation: none;
+}
+
+.box:active .title-2,
+.box:active .actor-boy .boy-fall {
+  opacity: 1;
+}
+
+.box:active .actor-brick {
+  offset-path: none;
+  animation: brick-away 0.5s ease-out forwards;
+}
+
+.box:active {
+  animation: shake 0.12s infinite ease-in-out;
+}
+
+@keyframes spiral-motion {
+  0% {offset-distance: 0%; opacity: 0; transform: scale(0.2);}
+  30% { opacity: 1;}
+  100% {offset-distance: 100%; opacity: 1;}
+}
+
+@keyframes brick-away {
+  0% { top: 0; left: 20px; opacity: 1; }
+  10% { top: -10px; left: 20px; opacity: 1; }
+  20% { top: -10px; left: 30px; opacity: 1; }
+  30% { top: -20px; left: 30px; opacity: 1; }
+  40% { top: -20px; left: 40px; opacity: 1; }
+  50% { top: -30px; left: 40px; opacity: 1; }
+  60% { top: -30px; left: 50px; opacity: 1; }
+  70% { top: -40px; left: 50px; opacity: 1; }
+  80% { top: -40px; left: 70px; opacity: 1; }
+  90% { top: -60px; left: 70px; opacity: 1; }
+  100% { top: -70px; left: 100px; opacity: 0; }
+}
+
+@keyframes shake { 
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-2px); }
+  75% { transform: translateY(2px); }
+}

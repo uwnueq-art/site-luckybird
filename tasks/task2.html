@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Задание 2 — Lucky Bird</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/task2.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="../index.html" aria-label="Lucky Bird — на главную">
+      <span class="logo__symbol">
+        <span class="logo__head"></span>
+        <span class="logo__crest"></span>
+        <span class="logo__body"></span>
+        <span class="logo__wing logo__wing_top"></span>
+        <span class="logo__wing logo__wing_mid"></span>
+        <span class="logo__wing logo__wing_bot"></span>
+        <span class="logo__tail logo__tail_f1"></span>
+        <span class="logo__tail logo__tail_f2"></span>
+        <span class="logo__tail logo__tail_f3"></span>
+      </span>
+      <span class="logo__caption"></span>
+    </a>
+    <input class="header__toggle" type="checkbox" id="nav-toggle">
+    <label class="header__burger" for="nav-toggle" aria-label="Меню"></label>
+    <ul class="header__menu">
+      <li><a class="header__link" href="../index.html">Главная страница</a></li>
+      <li><a class="header__link" href="../information.html">Советы по переезду</a></li>
+      <li><a class="header__link header__link_active" href="task.html" aria-current="page">Задания</a></li>
+    </ul>
+  </header>
+
+  <main class="section">
+    <article class="article">
+      <nav class="tasks__crumbs"><a href="task.html">Задания</a> / Задание 2</nav>
+      <h1>Задание 2</h1>
+      <p>Здесь располагается содержимое выполненного второго задания.</p>
+      
+      <div class="box">
+        <div class="title title-hover">Где мяч?</div>
+        <div class="title-2">Это кирпич!</div>
+
+        <div class="moving-objects actor-boy">
+          <img class="boy-stand" src="../img/boy1.png" alt="Мальчик стоит">
+          <img class="boy-turn" src="../img/boy2.png" alt="Мальчик повернулся">
+          <img class="boy-fall" src="../img/boy3.png" alt="Мальчик лежит">
+        </div>
+
+        <div class="moving-objects actor-ball">
+          <img class="ball" src="../img/ball.png" alt="Мячик">
+        </div>
+
+        <div class="moving-objects actor-brick">
+          <img class="brick" src="../img/box.png" alt="Кирпич">
+        </div>
+      </div>
+      
+      <nav class="tasks__pager">
+        <a class="tasks__link" href="task1.html">← Предыдущее</a>
+        <a class="tasks__link" href="task3.html">Следующее →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="footer__inner">
+      <div class="footer__col">
+        <h3 class="footer__title">Контакты</h3>
+        <p class="footer__text">Телефон: +7 (900) 000-00-00</p>
+        <p class="footer__text">E-mail: info@luckybird.example</p>
+      </div>
+      <nav class="footer__col">
+        <h3 class="footer__title">Навигация</h3>
+        <div class="footer__nav">
+          <a class="footer__link" href="../index.html">Главная страница</a>
+          <a class="footer__link" href="../information.html">Советы по переезду</a>
+          <a class="footer__link" href="task.html">Задания</a>
+        </div>
+      </nav>
+      <p class="footer__copy">© 2026 Lucky Bird. Все права защищены.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+.variant-4 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(54, 76, 132, 0.25);
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.quarter-stripe {
+  background: transparent;
+  box-sizing: border-box;
+  border-right: 5px solid #f9cb43;
+  border-bottom: 5px solid #f9cb43;
+  border-radius: 0 0 100% 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.variant-4 .sun {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px;
+}
+
+.variant-4 .sun .sun1 { width: 50px; height: 50px; border-color: #f7a828; }
+.variant-4 .sun .sun2 { width: 40px; height: 40px; border-color: #f9c033; }
+.variant-4 .sun .sun3 { width: 30px; height: 30px; border-color: #fad956; }
+.variant-4 .sun .sun4 { width: 20px; height: 20px; border-color: #fad956; }
+.variant-4 .sun .sun5 { width: 10px; height: 10px; border-color: #fad956; }
+
+.variant-4 .clouds {
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  display: flex;
+}
+
+.variant-4 .clouds span {
+  display: inline-block;
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #7dbbf7 75%, #4b92db 100%);
+  border-radius: 50%;
+}
+
+.variant-4 .clouds .c1 { width: 44px; height: 28px; }
+.variant-4 .clouds .c2 { width: 35px; height: 22px; margin-left: -10px; }
+.variant-4 .clouds .c3 { width: 28px; height: 14px; margin-left: -5px; }
+
+.variant-4 .smoke {
+  position: absolute;
+  top: 35px;
+  left: 128px;
+}
+
+.variant-4 .smoke span {
+  position: absolute;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #68b4f8 100%);
+  border-radius: 50%;
+}
+
+.variant-4 .smoke .s1 { width: 7px; height: 7px; top: 22px; left: 0; }
+.variant-4 .smoke .s2 { width: 9px; height: 9px; top: 10px; left: 2px; }
+.variant-4 .smoke .s3 { width: 9px; height: 9px; top: 0; left: 14px; }
+
+.variant-4 .tractor {
+  position: absolute;
+  bottom: -17px;
+  left: 10px;
+  width: 160px;
+  height: 120px;
+  transform: scale(1.2);
+  transform-origin: bottom left;
+}
+
+.variant-4 .tractor .roof {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  width: 44px;
+  height: 9px;
+  background: #de8724;
+  transform: skew(-25deg);
+}
+
+.variant-4 .tractor .pillar {
+  position: absolute;
+  top: 9px;
+  left: 42px;
+  width: 6px;
+  height: 30px;
+  background: #de8724;
+  box-shadow: 26px 0 0 #de8724;
+}
+
+.variant-4 .tractor .pipe-red {
+  position: absolute;
+  top: 16px;
+  left: 47px;
+  width: 18px;
+  height: 18px;
+  border: 5px solid #b82b1d;
+  border-top: none;
+  border-left: none;
+  border-radius: 0 0 16px 0;
+  transform: rotate(90deg);
+  z-index: 5;
+}
+
+.variant-4 .tractor .chimney {
+  position: absolute;
+  top: -1px;
+  left: 95px;
+  width: 8px;
+  height: 32px;
+  background: linear-gradient(to right, #f6cb92, #d18a38);
+}
+
+.variant-4 .tractor .cabin-body1 {
+  position: absolute;
+  top: 28px;
+  left: 66px;
+  width: 45px;
+  height: 0;
+  border-bottom: 12px solid #7cb778;
+  border-right: 9px solid transparent;
+}
+
+.variant-4 .tractor .cabin-body2 {
+  position: absolute;
+  top: 40px;
+  left: 66px;
+  width: 45px;
+  height: 0;
+  border-top: 12px solid #43853e;
+  border-right: 9px solid transparent;
+}
+
+.variant-4 .tractor .wheel-axis {
+  position: absolute;
+  top: 51px;
+  left: 48px;
+  width: 63px;
+  height: 14px;
+  background: linear-gradient(to bottom, #d2a472, #9d642e);
+}
+
+.variant-4 .tractor .wheel-big {
+  position: absolute;
+  top: 34px;
+  left: 32px;
+  width: 38px;
+  height: 38px;
+  background: #f4dbb7;
+  border: 4px solid #5a3e2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.variant-4 .tractor .wheel-small {
+  position: absolute;
+  top: 55px;
+  left: 92px;
+  width: 20px;
+  height: 20px;
+  background: #f4dbb7;
+  border: 3px solid #5a3e2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.variant-4 .tractor .dot {
+  width: 4px;
+  height: 4px;
+  background: #9d2b1b;
+  border-radius: 50%;
+}
+
+.variant-4 .ground-grass {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 195px;
+  height: 23px;
+  background: repeating-linear-gradient(
+    90deg,
+    #7cb730,
+    #7cb730 4px,
+    #b9e66b 7px,
+    #d8f49a 9px,
+    #ffffff 11px
+  );
+}
